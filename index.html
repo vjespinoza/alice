@@ -3,9 +3,243 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Alice</title>
+    <link rel="shortcut icon" type="image/svg" href="img/alice_icon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="site_header">
+      <div class="site_nav">
+        <div class="container">
+          <img src="./img/alice_logo.svg" alt="Alice Logo" class="site_logo" />
+          <nav class="nav_bar">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li>
+                <a href="#">Services</a>
+                <ul>
+                  <li><a href="#">Web Development</a></li>
+                  <li><a href="#">UI/UX Design</a></li>
+                  <li><a href="#">Brand Design</a></li>
+                  <li><a href="#">Digital Marketing</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Work</a></li>
+              <li>
+                <a href="#">Resources</a>
+                <ul>
+                  <li><a href="#">Courses</a></li>
+                  <li><a href="#">Guides</a></li>
+                  <li><a href="#">Community</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <a href="#" class="contact_btn btn">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header_content container">
+        <h1 class="header_title fw400">
+          Creativity is Our<br /><span class="u-case fw700">passion</span>
+        </h1>
+        <p class="header_slogan">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam
+          ullam necessitatibus, fugit dignissimos a, quod dolorum consequatur
+          magnam ipsa dicta porro saepe? Placeat, doloremque.
+        </p>
+      </div>
+    </header>
+
+    <main class="site_main container">
+      <div class="corporate_statement">
+        <div class="corporate_statement-content">
+          <h2 class="site_main-title">
+            <span class="col-main">Who </span>We Are
+          </h2>
+          <p class="site_main-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            augue nec sapien ultricies aliquet eget at erat. Suspendisse
+            tincidunt ut turpis eget vulputate. Etiam id lorem elit. Vestibulum
+            vel est a lacus tristique mollis. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Etiam consectetur vestibulum ornare.
+          </p>
+          <p class="site_main-text">
+            Quisque ullamcorper vehicula cursus. Praesent a arcu ex. Phasellus
+            sollicitudin est quis faucibus imperdiet. Nulla feugiat elit id
+            ipsum dapibus, vitae varius elit aliquet.
+          </p>
+          <p class="site_main-text">
+            Praesent sit amet mi eget libero tincidunt placerat ac scelerisque
+            nunc. Praesent congue, elit et blandit tincidunt, sapien erat semper
+            justo.
+          </p>
+          <p class="col-main">
+            Victor Espinoza<br /><span class="col-sec"
+              ><i>CEO & Founder</i></span
+            >
+          </p>
+        </div>
+        <!--corporate_statement-content-->
+        <div class="corporate_statement-image">
+          <img src="./img/S1_main-img.jpg" alt="Who we are" />
+        </div>
+        <!--corporate_statement-image-->
+      </div>
+      <!--corporate_statement-->
+      <div class="corporate_values">
+        <div class="value_card t-center">
+          <span class="value_icon col-main"><i class="fas fa-trophy"></i></span>
+          <h3 class="value_title">We aim for the best</h3>
+          <p class="value_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            labore commodi odit nulla facere molestiae.
+          </p>
+        </div>
+
+        <div class="value_card t-center">
+          <span class="value_icon col-main"
+            ><i class="fas fa-lightbulb"></i
+          ></span>
+          <h3 class="value_title">Creativity is our strength</h3>
+          <p class="value_text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+            ipsum aut voluptatum.
+          </p>
+        </div>
+
+        <div class="value_card t-center">
+          <span class="value_icon col-main"
+            ><i class="fas fa-recycle"></i
+          ></span>
+          <h3 class="value_title">We love agile workflows</h3>
+          <p class="value_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            voluptatibus quod impedit deserunt.
+          </p>
+        </div>
+      </div>
+      <!--corporate_values-->
+    </main>
+
+    <section class="features_bar">
+      <div class="feature_card f-card1 t-center">
+        <h3 class="feature_title">Awesome team</h3>
+        <p class="feature_text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic nostrum
+          voluptates temporibus suscipit quos adipisci ipsa amet nemo.
+        </p>
+        <a href="" class="feature_btn btn">Learn More</a>
+      </div>
+
+      <div class="feature_card f-card2 t-center">
+        <h3 class="feature_title">Fun at the office</h3>
+        <p class="feature_text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          maxime architecto asperiores sapiente.
+        </p>
+        <a href="" class="feature_btn btn">Learn More</a>
+      </div>
+
+      <div class="feature_card f-card3 t-center">
+        <h3 class="feature_title">Ideas are coming!</h3>
+        <p class="feature_text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          numquam autem eligendi exercitationem earum dicta.
+        </p>
+        <a href="" class="feature_btn btn">Learn More</a>
+      </div>
+    </section>
+
+    <section class="services container">
+      <div class="services_grid-container">
+        <div class="services_content">
+          <h2 class="services_title">
+            <span class="col-main">Our </span>Services
+          </h2>
+          <p class="services_text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
+            doloremque aperiam obcaecati, explicabo nam error iure, porro eos
+            exercitationem nesciunt ipsa minus aut maiores qui laudantium sequi
+            recusandae.
+          </p>
+        </div>
+
+        <img src="./img/icon_gear-big.svg" alt="gears illustration" />
+
+        <div class="services_card s-card1">
+          <h3 class="services_card-icon">
+            <i class="far fa-gem"></i>
+            <span class="services_card-title fw400 u-case"
+              >Creative Design</span
+            >
+          </h3>
+          <p class="services_card-text">
+            Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
+            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
+            quis, blandit leo.
+          </p>
+        </div>
+
+        <div class="services_card s-card2">
+          <h3 class="services_card-icon">
+            <i class="far fa-heart"></i>
+            <span class="services_card-title fw400 u-case">Ready For Use</span>
+          </h3>
+          <p class="services_card-text">
+            Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
+            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
+            quis, blandit leo.
+          </p>
+        </div>
+
+        <div class="services_card s-card3">
+          <h3 class="services_card-icon">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <span class="services_card-title fw400 u-case"
+              >Responsive Layout</span
+            >
+          </h3>
+          <p class="services_card-text">
+            Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
+            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
+            quis, blandit leo.
+          </p>
+        </div>
+
+        <div class="services_card s-card4">
+          <h3 class="services_card-icon">
+            <i class="fas fa-draw-polygon"></i>
+            <span class="services_card-title fw400 u-case">Pixel Perfect</span>
+          </h3>
+          <p class="services_card-text">
+            Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
+            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
+            quis, blandit leo.
+          </p>
+        </div>
+
+        <div class="services_card s-card5">
+          <h3 class="services_card-icon">
+            <i class="fas fa-wrench"></i>
+            <span class="services_card-title fw400 u-case"
+              >Easy Customization</span
+            >
+          </h3>
+          <p class="services_card-text">
+            Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
+            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
+            quis, blandit leo.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

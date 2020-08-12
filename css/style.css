@@ -1,9 +1,88 @@
+:root {
+  --col_Main: #fca311;
+  --col_Main-Light: #f5b145;
+  --col_Main-Opacity: rgba(252, 163, 17, 0.7);
+  --col_Second: #333533;
+  --col_Second-Opacity: rgba(51, 53, 51, 0.7);
+  --col_Third: #9a8c98;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap");
+
 html {
   box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+  color: var(--col_Second);
 }
 
 *,
 *:after,
 *:before {
   box-sizing: inherit;
+}
+
+/* GLOBAL STYLES */
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* UTILITIES */
+
+.container {
+  width: 75%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.col-main {
+  color: var(--col_Main);
+}
+
+.col-sec {
+  color: var(--col_Second);
+}
+
+.u-case {
+  text-transform: uppercase;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw400 {
+  font-weight: 400;
 }
