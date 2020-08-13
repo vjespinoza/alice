@@ -13,17 +13,18 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="site_header">
-      <div class="site_nav">
-        <div class="container">
+
+    <div class="site_nav">
+      <div class="container">
+        <div class="site_nav-content">
           <img src="./img/alice_logo.svg" alt="Alice Logo" class="site_logo" />
           <nav class="nav_bar">
-            <ul>
+            <ul class="menu_list">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li>
                 <a href="#">Services</a>
-                <ul>
+                <ul class="subMenu_list">
                   <li><a href="#">Web Development</a></li>
                   <li><a href="#">UI/UX Design</a></li>
                   <li><a href="#">Brand Design</a></li>
@@ -33,7 +34,7 @@
               <li><a href="#">Work</a></li>
               <li>
                 <a href="#">Resources</a>
-                <ul>
+                <ul class="subMenu_list">
                   <li><a href="#">Courses</a></li>
                   <li><a href="#">Guides</a></li>
                   <li><a href="#">Community</a></li>
@@ -43,18 +44,22 @@
             </ul>
             <a href="#" class="contact_btn btn">Contact</a>
           </nav>
+          <i class="fas fa-ellipsis-v mobile_menu-icon"></i>
         </div>
       </div>
+    </div>
 
+    <header class="site_header">
       <div class="header_content container">
-        <h1 class="header_title fw400">
-          Creativity is Our<br /><span class="u-case fw700">passion</span>
-        </h1>
-        <p class="header_slogan">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam
-          ullam necessitatibus, fugit dignissimos a, quod dolorum consequatur
-          magnam ipsa dicta porro saepe? Placeat, doloremque.
-        </p>
+        <div class="header_content-wrapper">
+          <h1 class="header_title fw300">
+            Creativity is Our<br /><span class="u-case fw700">passion</span>
+          </h1>
+          <p class="header_slogan">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam
+            ullam, fugit dignissimos quod dolorum consequatur
+            magnam ipsa dicta porro.
+        </div>
       </div>
     </header>
 
@@ -81,10 +86,8 @@
             nunc. Praesent congue, elit et blandit tincidunt, sapien erat semper
             justo.
           </p>
-          <p class="col-main">
-            Victor Espinoza<br /><span class="col-sec"
-              ><i>CEO & Founder</i></span
-            >
+          <p>
+            <span class="col-main" >Lauryn Hill<br /></span><i>CEO & Founder</i>
           </p>
         </div>
         <!--corporate_statement-content-->
@@ -241,5 +244,480 @@
         </div>
       </div>
     </section>
+
+    <section class="site_cta">
+      <div class="container">
+        <div class="cta_content">
+          <h3 class="cta_title fw400 col-main">Newsletter Sign Up!</h3>
+          <p class="cta_text">
+            Subscribe to get some awesome goodies and surprises. We won´t spam
+            you!
+          </p>
+        </div>
+        <form class="cta_form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="email@example.com" />
+        </form>
+      </div>
+    </section>
+
+    <section class="site_portfolio container">
+      <div class="portfolio_content">
+        <h2 class="portfolio_title">
+          <span class="col-main">Our </span>Portfolio
+        </h2>
+        <p class="portfolio_text">
+          Take a look at some of our best work. We're proud to brag!
+        </p>
+      </div>
+      <!--portfolio_content-->
+
+      <div class="portfolio_photo-grid">
+        <div class="portfolio_card p-card1 t-center">
+          <img
+            src="./img/S3_1x1_contiq-logo.jpg"
+            alt="contiq logo"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">Logo re-design for Contiq</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card2 t-center">
+          <img
+            src="./img/S3_H_landing-page-fashion-min.jpg"
+            alt="landing page fashion"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">Fashion magazine landing page</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card3 t-center">
+          <img
+            src="./img/S3_1x1_mr-vendetta-min.jpg"
+            alt="mr vendetta campaign"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">Mr. Vendetta social media campaign</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card4 t-center">
+          <img
+            src="./img/S3_H_landing-page-music.jpg"
+            alt="landing page rock band"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">The Black Cats have a new website</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card5 t-center">
+          <img
+            src="./img/S3_V_makeup-campaign-min.jpg"
+            alt="makeup campaign"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">Maxx Makeup's marketing campaign</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card6 t-center">
+          <img
+            src="./img/S3_H_landing-page-sport-min.jpg"
+            alt="running is life re-design"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">Runnig is life: Website re-design</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card7 t-center">
+          <img
+            src="./img/S3_V_fashion-campaign-min.jpg"
+            alt="fashion show"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">
+            New York fashion show: Social media campaign
+          </h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card8 t-center">
+          <img
+            src="./img/S3_H_holla_mag_rebrand.gif"
+            alt="holla mag logo"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">Holla! Mag logo</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+
+        <div class="portfolio_card p-card9 t-center">
+          <img
+            src="./img/S3_V_sport-shoes-campaign-min.jpg"
+            alt="woman in sports"
+            class="p_card-image"
+          />
+          <h3 class="p_card_title">Woman in sports photoshoot</h3>
+          <p class="p_card-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
+            adipisci corrupti sit.
+          </p>
+          <div class="p_card-interaction">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-share-alt"></i>
+          </div>
+        </div>
+      </div>
+      <!--portfolio_photo-grid-->
+    </section>
+
+    <section class="team_members">
+      <div class="container">
+        <div class="team_members-content">
+          <h3 class="team_menbers-title">
+            <span class="col-main">Team </span>Members
+          </h3>
+          <p class="team_members-text">
+            Vestibulum ac iaculis erat, sed consectetur orci. Etiam suscipit
+            elit egestas libero vulputate vehicula. Aenean felis erat, porttitor
+            ac elit eget, fermentum viverra velit. Morbi imperdiet rhoncus elit
+            sollicitudin molestie. Proin vel pharetra eros, ac fringilla lacus.
+            Donec in sagittis ipsum. Praesent et tempus ligula, a blandit justo.
+            Sed vitae commodo nunc, a euismod nisl.
+          </p>
+        </div>
+        <!--team_members-content-->
+
+        <div class="team_members-cards">
+          <div class="member_card">
+            <input type="checkbox" name="tm_card1" id="tm_card1" />
+            <label for="tm_card1" class="tm_card1">ABC</label>
+            <div class="tm_card1-content t-center">
+              <img
+                src="./img/staff-1.jpg"
+                alt="Lauryn Hill"
+                class="tm_card1-image"
+              />
+              <h3 class="tm_card1-title">Lauryn Hill</h3>
+              <span class="tm_card1-position"><i>CEO & Founder</i></span>
+              <p class="tm_card1-text">
+                Aenean dapibus ex malesuada maximus mi id, facilisis leo.
+              </p>
+            </div>
+          </div>
+          <!--member_card-->
+
+          <div class="member_card">
+            <input type="checkbox" name="tm_card2" id="tm_card2" />
+            <label for="tm_card2" class="tm_card2">ABC</label>
+            <div class="tm_card2-content t-center">
+              <img
+                src="./img/staff-2.jpg"
+                alt="Alicia Keys"
+                class="tm_card2-image"
+              />
+              <h3 class="tm_card2-title">Alicia Keys</h3>
+              <span class="tm_card2-position"><i>Web Developer</i></span>
+              <p class="tm_card2-text">
+                Aenean dapibus ex malesuada maximus mi id, facilisis leo.
+              </p>
+            </div>
+          </div>
+          <!--member_card-->
+
+          <div class="member_card">
+            <input type="checkbox" name="tm_card3" id="tm_card3" />
+            <label for="tm_card3" class="tm_card3">ABC</label>
+            <div class="tm_card3-content t-center">
+              <img
+                src="./img/staff-3.jpg"
+                alt="Dave Grohl"
+                class="tm_card3-image"
+              />
+              <h3 class="tm_card3-title">Dave Grohl</h3>
+              <span class="tm_card3-position"><i>UX/UI Designer</i></span>
+              <p class="tm_card3-text">
+                Aenean dapibus ex malesuada maximus mi id, facilisis leo.
+              </p>
+            </div>
+          </div>
+          <!--member_card-->
+
+          <div class="member_card">
+            <input type="checkbox" name="tm_card4" id="tm_card4" />
+            <label for="tm_card4" class="tm_card4">ABC</label>
+            <div class="tm_card4-content t-center">
+              <img
+                src="./img/staff-4.jpg"
+                alt="Lucy Liu"
+                class="tm_card4-image"
+              />
+              <h3 class="tm_card4-title">Lucy Liu</h3>
+              <span class="tm_card4-position"
+                ><i>Social Media Specialist</i></span
+              >
+              <p class="tm_card4-text">
+                Aenean dapibus ex malesuada maximus mi id, facilisis leo.
+              </p>
+            </div>
+          </div>
+          <!--member_card-->
+
+          <div class="member_card">
+            <input type="checkbox" name="tm_card5" id="tm_card5" />
+            <label for="tm_card5" class="tm_card5">ABC</label>
+            <div class="tm_card5-content t-center">
+              <img
+                src="./img/staff-5.jpg"
+                alt="Till Lindemann"
+                class="tm_card5-image"
+              />
+              <h3 class="tm_card5-title">Till Lindemann</h3>
+              <span class="tm_card5-position"><i>Graphic Designer</i></span>
+              <p class="tm_card5-text">
+                Aenean dapibus ex malesuada maximus mi id, facilisis leo.
+              </p>
+            </div>
+          </div>
+          <!--member_card-->
+
+          <div class="member_card">
+            <input type="checkbox" name="tm_card6" id="tm_card6" />
+            <label for="tm_card6" class="tm_card6">ABC</label>
+            <div class="tm_card6-content t-center">
+              <img
+                src="./img/staff-6.jpg"
+                alt="Tori Amos"
+                class="tm_card6-image"
+              />
+              <h3 class="tm_card6-title">Tori Amos</h3>
+              <span class="tm_card6-position"><i>Photographer</i></span>
+              <p class="tm_card6-text">
+                Aenean dapibus ex malesuada maximus mi id, facilisis leo.
+              </p>
+            </div>
+          </div>
+          <!--member_card-->
+        </div>
+        <!--team_members-cards-->
+      </div>
+    </section>
+
+    <section class="pricing_table">
+      <div class="container">
+        <div class="pricing_table-content">
+          <h3 class="pricing_table-title">
+            <span class="col-main">Pricing </span>Table
+          </h3>
+          <p class="pricing_table-text">We adapt to your goals and budget</p>
+        </div>
+
+        <div class="pricing_table-grid">
+          <div class="pricing_plan plan-1 t-center">
+            <h3 class="pricing_plan-name">
+              01<span class="fw400 u-case">Basic</span>
+            </h3>
+            <p class="pricing_plan-price col-main">
+              <sup>$</sup>620<span>/month</span>
+            </p>
+            <p>Web Site - 3 Pages</p>
+            <p>Landing Page x1</p>
+            <p>Social Media - 1 Account</p>
+            <p>Professional Photos - Up To 100</p>
+            <p>Brand Design</p>
+            <div class="pricing_btn1 btn">Get Started</div>
+          </div>
+
+          <div class="pricing_plan plan-2 t-center">
+            <h3 class="pricing_plan-name">
+              02<span class="fw400 u-case">Rockstar</span>
+            </h3>
+            <p class="pricing_plan-price col-main">
+              <sup>$</sup>850<span>/month</span>
+            </p>
+            <p>Web Site - 6 Pages</p>
+            <p>Landing Page x3</p>
+            <p>Social Media - 3 Accounts</p>
+            <p>Professional Photos - Up To 200</p>
+            <p>Brand Design</p>
+            <div class="pricing_btn2 btn">Get Started</div>
+          </div>
+
+          <div class="pricing_plan plan-3 t-center">
+            <h3 class="pricing_plan-name">
+              03<span class="fw400 u-case">Avenger</span>
+            </h3>
+            <p class="pricing_plan-price col-main">
+              <sup>$</sup>980<span>/month</span>
+            </p>
+            <p>Web Site - Unlimited</p>
+            <p>Landing Page - Unlimited</p>
+            <p>Social Media - Unlimited</p>
+            <p>Professional Photos - Unlimited</p>
+            <p>Brand Design</p>
+            <div class="pricing_btn1 btn">Get Started</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site_testimonials t-center">
+      <blockquote class="client_testimonial">
+        <i
+          >Morbi imperdiet rhoncus elit sollicitudin molestie. Proin vel
+          pharetra eros, ac fringilla lacus. Donec in sagittis ipsum. Praesent
+          et tempus ligula, a blandit justo.</i
+        >
+      </blockquote>
+      <p class="client_name">
+        <b>Jonathan Davis</b> <br />
+        <span class="client_company">Lead Singer | Korn</span>
+      </p>
+    </section>
+
+    <section class="site_contact">
+      <div class="site_contact-container">
+        <form class="contact_form">
+          <legend class="form_title">
+            Let's talk!<br /><span class="form_copy"
+              >Need a website? Boost your social media? Get your brand know?
+              Leave your contact info below.</span
+            >
+          </legend>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="email@example.com" />
+          <label for="message">Yout message:</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="What can we do for you?"
+          ></textarea>
+          <input type="submit" value="Submit" class="btn" />
+        </form>
+        <!--contact_form-->
+
+        <div class="contact_info">
+          <span class="addess-icon"><i class="far fa-building"></i></span>
+          <p class="address-info">
+            20 W 34th St, New York, NY 10001, United States
+          </p>
+
+          <span class="phone-icon"><i class="fas fa-phone-alt"></i></span>
+          <p class="phone-info">+1 (800) 987.6543</p>
+
+          <span class="email-icon"><i class="fas fa-at"></i></span>
+          <p class="email-info">hello@alice.com</p>
+        </div>
+        <!--contact_info-->
+      </div>
+      <!--site_contact-container-->
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12090.470159428245!2d-73.9856644!3d40.7484405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1ses!2sco!4v1597259581982!5m2!1ses!2sco"
+        width="800"
+        height="300"
+        frameborder="0"
+        style="border: 0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </section>
+
+    <footer class="site_footer">
+      <div class="footer_main container">
+        <div class="footer_content">
+          <img src="./img/alice_logo.svg" alt="Alice Logo" class="site_logo" />
+          <p class="footer_text">
+            Nunc risus nisl, volutpat pulvinar elit sed, pharetra porttitor
+            neque. Mauris ac convallis ipsum. Donec nisl nibh, eleifend sit amet
+            commodo quis, posuere eu elit. Phasellus sed diam ut lorem congue
+            laoreet sit amet eu nisi.
+          </p>
+        </div>
+
+        <div class="footer_twitter-feed">FEED</div>
+
+        <div class="footer_instagram-feed">FEED</div>
+      </div>
+
+      <div class="footer_bottom-bar">
+        <div class="container">
+          <p class="footer_legal">&copy;  Copyright 2020. All rights resreved </p>
+          <p class="footer_company-name">Alice Web Services Ltd.</p>
+          <div class="footer_social">
+            <a href=#""><i class="fab fa-facebook-square"></i></a>
+            <a href=#""><i class="fab fa-instagram"></i></a>
+            <a href=#""><i class="fab fa-twitter"></i></a>
+            <a href=#""><i class="fab fa-youtube"></i></a>
+            <a href=#""><i class="fab fa-linkedin-in"></i></a>
+            <a href=#""><i class="fab fa-whatsapp"></i></a>
+            <a href=#""><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

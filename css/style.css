@@ -1,19 +1,19 @@
 :root {
   --col_Main: #fca311;
   --col_Main-Light: #f5b145;
-  --col_Main-Opacity: rgba(252, 163, 17, 0.7);
+  --col_Main-Opacity: rgba(252, 163, 17, 0.5);
   --col_Second: #333533;
-  --col_Second-Opacity: rgba(51, 53, 51, 0.7);
+  --col_Second-Opacity: rgba(51, 53, 51, 0.5);
   --col_Third: #9a8c98;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
 
 html {
   box-sizing: border-box;
   font-family: "Hind Siliguri", sans-serif;
   font-size: 62.5%;
-  line-height: 1;
+  line-height: 1.5;
   color: var(--col_Second);
 }
 
@@ -43,6 +43,13 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
 img {
   width: 100%;
 }
@@ -50,17 +57,19 @@ img {
 /* UTILITIES */
 
 .container {
-  width: 75%;
+  width: 95%;
   max-width: 120rem;
   margin: 0 auto;
 }
 
-.col-main {
-  color: var(--col_Main);
+@media (min-width: 768px) {
+  .container {
+    width: 75%;
+  }
 }
 
-.col-sec {
-  color: var(--col_Second);
+.col-main {
+  color: var(--col_Main);
 }
 
 .u-case {
@@ -85,4 +94,154 @@ img {
 
 .fw400 {
   font-weight: 400;
+}
+
+.fw300 {
+  font-weight: 300;
+}
+
+/* SITE NAV */ /* SITE NAV */ /* SITE NAV */
+.site_nav {
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 8px -2px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site_nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: relative;
+}
+
+.site_logo {
+  display: inline-block;
+  width: 8rem;
+}
+
+.mobile_menu-icon {
+  font-size: 2rem;
+  color: var(--col_Second);
+  cursor: pointer;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: right;
+}
+
+.nav_bar {
+  display: block;
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 5rem;
+  background-color: brown;
+}
+
+.menu_list,
+.subMenu_list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.menu_list li,
+.subMenu_list li {
+  color: var(--col_Second);
+  width: 100%;
+}
+
+.menu_list li a,
+.subMenu_list li a {
+  display: block;
+  color: var(--col_Second);
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* SITE HEADER */ /* SITE HEADER */ /* SITE HEADER */
+.site_header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+  background: linear-gradient(
+      to right,
+      rgba(42, 32, 187, 0.5),
+      rgba(247, 103, 235, 0.5)
+    ),
+    url(../img/header.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.header_content-wrapper {
+  --stroke: 1.5rem;
+  --padding: 4rem;
+  display: block;
+  max-width: 50rem;
+  color: white;
+  border-top: var(--stroke) solid var(--col_Main-Opacity);
+  border-bottom: var(--stroke) solid var(--col_Main-Opacity);
+  border-right: var(--stroke) solid var(--col_Main-Opacity);
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+  padding-right: var(--padding);
+  position: relative;
+  margin: 0;
+}
+
+.header_content-wrapper:before,
+.header_content-wrapper:after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 100%;
+  background-color: var(--col_Main-Opacity);
+  position: absolute;
+  left: 0;
+}
+
+.header_content-wrapper:before {
+  bottom: calc(100% + 1.5rem);
+}
+
+.header_content-wrapper:after {
+  top: calc(100% + 1.5rem);
+}
+
+.header_title {
+  line-height: 1;
+  margin: 0 0 0.5rem 2rem;
+  position: relative;
+}
+
+/* .header_title:before {
+  content: "welcome";
+  font-size: 1.6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+  color: white;
+  position: absolute;
+  bottom: 45%;
+  left: -11%;
+  transform: rotate(-90deg);
+} */
+
+.header_title span {
+  color: var(--col_Main);
+  font-size: clamp(7rem, 6vw, 10rem);
+}
+
+.header_slogan {
+  font-size: 1.4rem;
+  line-height: 2;
+  margin-bottom: 0;
 }
