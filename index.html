@@ -134,7 +134,7 @@
     <section class="features_bar">
       <div class="feature_card f-card1 t-center">
         <div class="feature_card-content">
-          <h3 class="feature_title">Awesome team</h3>
+          <h3 class="feature_title fw400 u-case">Awesome team</h3>
           <p class="feature_text">
             Lorem ipsum amet consectetur adipisicing elit. Hic nostrum
             voluptates quos adipisci ipsa amet nemo.
@@ -145,7 +145,7 @@
 
       <div class="feature_card f-card2 t-center">
         <div class="feature_card-content">
-          <h3 class="feature_title">Fun at the office</h3>
+          <h3 class="feature_title fw400 u-case">Fun at the office</h3>
           <p class="feature_text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
             maxime architecto asperiores sapiente.
@@ -156,7 +156,7 @@
 
       <div class="feature_card f-card3 t-center">
         <div class="feature_card-content">
-          <h3 class="feature_title">Ideas are coming!</h3>
+          <h3 class="feature_title fw400 u-case">Ideas are coming!</h3>
           <p class="feature_text">
             Lorem ipsum dolor sit amet adipisicing elit. Officia
             numquam autem eligendi exercitationem earum dicta.
@@ -174,84 +174,78 @@
           </h2>
           <p class="services_text">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
-            doloremque aperiam obcaecati, explicabo nam error iure, porro eos
-            exercitationem nesciunt ipsa minus aut maiores qui laudantium sequi
+            explicabo nam error iure, porro eos minus aut maiores qui laudantium sequi
             recusandae.
           </p>
         </div>
 
-        <img src="./img/icon_gear-big.svg" alt="gears illustration" />
+        <img class="services_icon" src="./img/icon_gear-big.svg" alt="gears illustration" />
 
-        <div class="services_card s-card1">
-          <h3 class="services_card-icon">
+        <div class="services_card">
+          <h3 class="services_card-title">
             <i class="far fa-gem"></i>
-            <span class="services_card-title fw400 u-case"
+            <span class="fw400 u-case"
               >Creative Design</span
             >
           </h3>
           <p class="services_card-text">
             Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
-            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
-            quis, blandit leo.
+            suscipit, eu placerat elit gravida. 
           </p>
         </div>
 
-        <div class="services_card s-card2">
-          <h3 class="services_card-icon">
+        <div class="services_card">
+          <h3 class="services_card-title">
             <i class="far fa-heart"></i>
-            <span class="services_card-title fw400 u-case">Ready For Use</span>
+            <span class="fw400 u-case">Ready For Use</span>
           </h3>
           <p class="services_card-text">
             Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
-            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
-            quis, blandit leo.
+            suscipit, eu placerat elit gravida. 
           </p>
         </div>
 
-        <div class="services_card s-card3">
-          <h3 class="services_card-icon">
+        <div class="services_card">
+          <h3 class="services_card-title">
             <i class="fas fa-expand-arrows-alt"></i>
-            <span class="services_card-title fw400 u-case"
+            <span class="fw400 u-case"
               >Responsive Layout</span
             >
           </h3>
           <p class="services_card-text">
             Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
-            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
-            quis, blandit leo.
+            suscipit, eu placerat elit gravida. 
           </p>
         </div>
 
-        <div class="services_card s-card4">
-          <h3 class="services_card-icon">
+        <div class="services_card">
+          <h3 class="services_card-title">
             <i class="fas fa-draw-polygon"></i>
-            <span class="services_card-title fw400 u-case">Pixel Perfect</span>
+            <span class="fw400 u-case">Pixel Perfect</span>
           </h3>
           <p class="services_card-text">
             Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
-            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
-            quis, blandit leo.
+            suscipit, eu placerat elit gravida. 
           </p>
         </div>
 
-        <div class="services_card s-card5">
-          <h3 class="services_card-icon">
+        <div class="services_card">
+          <h3 class="services_card-title">
             <i class="fas fa-wrench"></i>
-            <span class="services_card-title fw400 u-case"
+            <span class="fw400 u-case"
               >Easy Customization</span
             >
           </h3>
           <p class="services_card-text">
             Maecenas a mattis nulla. Aenean euismod lorem suscipit nunc
-            suscipit, eu placerat elit gravida. Duis et est rutrum, mattis odio
-            quis, blandit leo.
+            suscipit, eu placerat elit gravida. 
           </p>
         </div>
       </div>
     </section>
 
     <section class="site_cta">
-      <div class="container">
+      <div class="container cta_d-flex">
         <div class="cta_content">
           <h3 class="cta_title fw400 col-main">Newsletter Sign Up!</h3>
           <p class="cta_text">
@@ -259,9 +253,12 @@
             you!
           </p>
         </div>
-        <form class="cta_form">
-          <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="email@example.com" />
+        <!-- action="destination.html" method="GET" -->
+        <form  class="cta_form">
+          <!-- onblur="this.value=''" -->
+          <input type="email" id="email" maxlength="45" onfocus="this.value=''" />
+          <label for="email">Enter your e-Mail</label>
+          <input class="btn" type="submit" value="">
         </form>
       </div>
     </section>
