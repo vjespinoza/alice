@@ -669,7 +669,8 @@ img {
 }
 
 .cta_form:focus-within label,
-.cta_form input:invalid ~ label {
+.cta_form input:invalid ~ label,
+.cta_form input:valid:not(:placeholder-shown) ~ label {
   transform: translateY(-150%) translateX(-6%);
   color: white;
   transition: all ease-in-out 0.3s;
