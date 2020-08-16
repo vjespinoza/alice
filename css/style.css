@@ -668,8 +668,9 @@ img {
   position: relative;
 }
 
-.cta_form:focus-within label,
-.cta_form input:invalid ~ label,
+/* sunday changes */
+.cta_form:focus-within:not(:placeholder-shown) label,
+.cta_form input:invalid:not(:placeholder-shown) ~ label,
 .cta_form input:valid:not(:placeholder-shown) ~ label {
   transform: translateY(-150%) translateX(-6%);
   color: white;
