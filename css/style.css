@@ -699,3 +699,27 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+/* PORTFOLIO SECTION */ /* PORTFOLIO SECTION */ /* PORTFOLIO SECTION */
+
+.portfolio_photo-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(4, 1fr);
+  /* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+
+.portfolio_card {
+  position: relative;
+}
+
+.p-card1 .p_card-img {
+  width: 300px;
+  height: 300px;
+  background: url("../img/S3.1_1x1_contiq-logo.jpg") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
