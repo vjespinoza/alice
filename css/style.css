@@ -705,21 +705,76 @@ img {
 .portfolio_photo-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(4, 1fr);
-  /* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
 }
 
-.portfolio_card {
-  position: relative;
-}
-
-.p-card1 .p_card-img {
-  width: 300px;
-  height: 300px;
-  background: url("../img/S3.1_1x1_contiq-logo.jpg") no-repeat center center;
+.portfolio_item {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-content: center;
   background-size: cover;
-  position: absolute;
-  top: 0;
-  z-index: -1;
+  background-position: center center;
+}
+
+.p-item1 {
+  background-image: url(../img/S3.1_1x1_contiq-logo.jpg);
+}
+
+.p-item2 {
+  background-image: url(../img/S3.2_H_landing-page-fashion-min.jpg);
+}
+
+.p-item3 {
+  background-image: url(../img/S3.3_1x1_mr-vendetta-min.jpg);
+}
+
+.p-item4 {
+  background-image: url(../img/S3.4_H_landing-page-music.jpg);
+}
+
+.p-item5 {
+  background-image: url(../img/S3.5_V_makeup-campaign-min.jpg);
+}
+
+.p-item6 {
+  background-image: url(../img/S3.6_H_landing-page-sport-min.jpg);
+}
+
+.p-item7 {
+  background-image: url(../img/S3.7_V_fashion-campaign-min.jpg);
+}
+
+.p-item8 {
+  background-image: url(../img/S3.8_H_holla_mag_rebrand.gif);
+}
+
+.p-item9 {
+  background-image: url(../img/S3.9_V_sport-shoes-campaign-min.jpg);
+}
+
+.square {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.horizontal-big {
+  grid-column: span 5;
+  grid-row: span 2;
+}
+
+.horizontal {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.horizontal.p-item8 {
+  grid-column: 4 / span 3;
+  grid-row: 8 / span 2;
+}
+
+.vertical {
+  grid-column: span 3;
+  grid-row: span 5;
 }
