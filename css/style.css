@@ -705,7 +705,7 @@ img {
 .portfolio_photo-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(2, 1fr) 3vw repeat(3, 1fr) 3vw repeat(2, 1fr);
   grid-template-rows: repeat(9, 1fr);
 }
 
@@ -716,6 +716,11 @@ img {
   align-content: center;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.portfolio_item:hover {
 }
 
 .p-item1 {
@@ -777,4 +782,28 @@ img {
 .vertical {
   grid-column: span 3;
   grid-row: span 5;
+}
+
+.p_item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  background: var(--col_Second-Opacity);
+  position: relative;
+}
+
+.p_item-content h3 {
+  font-size: 1.4rem;
+}
+
+.p_item-content p {
+  font-size: 1.2rem;
+  max-width: 30rem;
+}
+
+.p_item-nav {
+  position: absolute;
 }
