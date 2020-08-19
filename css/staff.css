@@ -1,0 +1,137 @@
+:root {
+  --col_Main: #fca311;
+  --col_Main-Light: #f5b145;
+  --col_Main-Opacity: rgba(252, 163, 17, 0.5);
+  --col_Second: #333533;
+  --col_Second-Opacity: rgba(51, 53, 51, 0.5);
+  --col_Third: #9a8c98;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 62.5%;
+  line-height: 1.5;
+  color: var(--col_Second);
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+/* STYLES */ /* STYLES */ /* STYLES */ /* STYLES */
+
+form {
+  display: flex;
+  justify-content: space-around;
+  background: grey;
+  height: 300px;
+  position: relative;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.staff-card {
+  position: absolute;
+  top: 20%;
+}
+
+.position-wrapper1,
+.position-wrapper2,
+.position-wrapper3 {
+  position: relative;
+}
+
+label[for="opt1"] {
+  position: absolute;
+  top: -20%;
+  right: 20%;
+  z-index: 10;
+}
+
+label[for="opt2"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+label[for="opt3"] {
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  z-index: 10;
+}
+
+label img {
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.Alicia {
+  background-color: blue;
+  display: flex;
+  visibility: hidden;
+}
+
+.Mary {
+  background-color: green;
+  display: flex;
+  visibility: hidden;
+}
+
+.Jane {
+  background-color: purple;
+  display: flex;
+  visibility: hidden;
+}
+
+#opt1:checked ~ label img {
+  box-shadow: 0 0 0 4px hotpink;
+}
+
+#opt2:checked ~ label img {
+  box-shadow: 0 0 0 4px hotpink;
+}
+
+#opt3:checked ~ label img {
+  box-shadow: 0 0 0 4px hotpink;
+}
+
+#opt1:checked ~ .Alicia {
+  display: flex;
+  visibility: visible;
+  color: black;
+}
+
+#opt2:checked ~ .Mary {
+  display: flex;
+  visibility: visible;
+  color: black;
+}
+
+#opt3:checked ~ .Jane {
+  display: flex;
+  visibility: visible;
+  color: black;
+}
