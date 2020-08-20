@@ -860,17 +860,179 @@ img {
 .team_d-flex {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .team_members-content {
-  flex: 1 1 40%;
+  flex: 1 1 60%;
+  padding-right: 2rem;
 }
 
 .team_members-cards {
-  flex: 1 1 60%;
+  flex: 1 1 40%;
 }
 
-.member_card img {
-  width: 10px;
-  height: 10px;
+/* TEAM MEMBERS CARDS (FORM) */ /* TEAM MEMBERS CARDS (FORM) */
+
+.team_members-cards {
+  display: flex;
+  height: 40rem;
+  position: relative;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.staff-card {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+}
+
+.position-wrapper1,
+.position-wrapper2,
+.position-wrapper3,
+.position-wrapper4,
+.position-wrapper5,
+.position-wrapper6 {
+  position: relative;
+}
+
+label[for="staff-opt1"] {
+  position: absolute;
+  top: -12%;
+  right: 23%;
+  z-index: 10;
+}
+
+label[for="staff-opt2"] {
+  position: absolute;
+  top: -1%;
+  right: 10%;
+  z-index: 10;
+}
+
+label[for="staff-opt3"] {
+  position: absolute;
+  top: 14.5%;
+  right: 0.5%;
+  z-index: 10;
+}
+
+label[for="staff-opt4"] {
+  position: absolute;
+  top: 33%;
+  right: -4.5%;
+  z-index: 10;
+}
+
+label[for="staff-opt5"] {
+  position: absolute;
+  top: 52%;
+  right: -4.5%;
+  z-index: 10;
+}
+
+label[for="staff-opt6"] {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  z-index: 10;
+}
+
+label img {
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px var(--col_Main-Opacity);
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: solid 8px var(--col_Main);
+  overflow: hidden;
+  position: relative;
+}
+
+.person figcaption {
+  position: absolute;
+  background-color: rgba(252, 163, 17, 0.8);
+  padding: 2rem 8rem;
+  bottom: 0;
+  line-height: 1;
+}
+
+.person .staff-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.person .staff-title {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.person .staff-text {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.lauryn,
+.alicia,
+.dave,
+.lucy,
+.till,
+.tori {
+  visibility: hidden;
+}
+
+#staff-opt1:checked ~ label img,
+#staff-opt2:checked ~ label img,
+#staff-opt3:checked ~ label img,
+#staff-opt4:checked ~ label img,
+#staff-opt5:checked ~ label img,
+#staff-opt6:checked ~ label img {
+  box-shadow: 0 0 0 4px var(--col_Main);
+}
+
+#staff-opt1:checked ~ .lauryn {
+  display: flex;
+  visibility: visible;
+}
+
+#staff-opt2:checked ~ .alicia {
+  display: flex;
+  visibility: visible;
+}
+
+#staff-opt3:checked ~ .dave {
+  display: flex;
+  visibility: visible;
+}
+
+#staff-opt4:checked ~ .lucy {
+  display: flex;
+  visibility: visible;
+}
+
+#staff-opt5:checked ~ .till {
+  display: flex;
+  visibility: visible;
+}
+
+#staff-opt6:checked ~ .tori {
+  display: flex;
+  visibility: visible;
 }
