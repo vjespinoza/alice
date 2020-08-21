@@ -4,7 +4,7 @@
   --col_Main-Opacity: rgba(252, 163, 17, 0.5);
   --col_Second: #333533;
   --col_Second-Opacity: rgba(51, 53, 51, 0.5);
-  --col_Third: #9a8c98;
+  --col_Third: #f3f3f3;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
@@ -23,7 +23,9 @@ html {
   box-sizing: inherit;
 }
 
-/* GLOBAL STYLES */
+/* ==================================================
+>>>>> (A) - GLOBAL STYLES
+================================================== */
 
 h1 {
   font-size: 5rem;
@@ -54,7 +56,9 @@ img {
   width: 100%;
 }
 
-/* UTILITIES */
+/* ==================================================
+>>>>> (B) - UTILITIES
+================================================== */
 
 .container {
   width: 90%;
@@ -72,15 +76,20 @@ img {
   display: block;
   color: white;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.4rem;
-  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
   border: none;
   cursor: pointer;
   background-color: var(--col_Main);
   flex: 0 0 100%;
   text-align: center;
   margin-top: 2rem;
+}
+
+.btn:hover {
+  background-color: var(--col_Main-Light);
+  transition: ease-in-out 0.2s;
 }
 
 @media (min-width: 768px) {
@@ -122,7 +131,10 @@ img {
   font-weight: 300;
 }
 
-/* SITE NAV */ /* SITE NAV */ /* SITE NAV */
+/* ==================================================
+>>>>> (01) - SITE NAV
+================================================== */
+
 .site_nav {
   width: 100%;
   height: 5rem;
@@ -187,7 +199,10 @@ img {
   padding: 1rem 0;
 }
 
-/* SITE HEADER */ /* SITE HEADER */ /* SITE HEADER */
+/* ==================================================
+>>>>> (02) - SITE HEADER
+================================================== */
+
 .site_header {
   display: flex;
   align-items: center;
@@ -298,7 +313,9 @@ img {
   font-size: clamp(1.2rem, 1.5vw, 1.4rem);
 }
 
-/* SITE MAIN SECTION */ /* SITE MAIN SECTION */ /* SITE MAIN SECTION */
+/* ==================================================
+>>>>> (03) - SITE MAIN SECTION
+================================================== */
 
 .site_main {
   background: linear-gradient(
@@ -385,7 +402,10 @@ img {
   font-size: 1.4rem;
 }
 
-/* FEATURES BAR */ /* FEATURES BAR */ /* FEATURES BAR */
+/* ==================================================
+>>>>> (04) - FEATURES BAR
+================================================== */
+
 .features_bar {
   display: flex;
   flex-wrap: wrap;
@@ -540,7 +560,10 @@ img {
   }
 }
 
-/* SERVICES */ /* SERVICES */ /* SERVICES */
+/* ==================================================
+>>>>> (05) - SERVICES
+================================================== */
+
 .services {
   padding: 4rem 0;
 }
@@ -608,7 +631,10 @@ img {
   }
 }
 
-/*  SITE CTA */ /*  SITE CTA */ /*  SITE CTA */
+/* ==================================================
+>>>>> (06) - SITE CTA
+================================================== */
+
 .site_cta {
   background: var(--col_Second);
   color: white;
@@ -700,7 +726,9 @@ img {
   background-position: center center;
 }
 
-/* PORTFOLIO SECTION */ /* PORTFOLIO SECTION */ /* PORTFOLIO SECTION */
+/* ==================================================
+>>>>> (07) - PORTFOLIO SECTION
+================================================== */
 
 .site_portfolio {
   padding: 4rem 0;
@@ -849,7 +877,10 @@ img {
   cursor: pointer;
 }
 
-/* TEAM MEMBERS */ /* TEAM MEMBERS */ /* TEAM MEMBERS */
+/* ==================================================
+>>>>> (08) - TEAM MEMBERS
+================================================== */
+
 .team_members {
   background: var(--col_Second);
   width: 100%;
@@ -872,7 +903,9 @@ img {
   flex: 1 1 40%;
 }
 
-/* TEAM MEMBERS CARDS (FORM) */ /* TEAM MEMBERS CARDS (FORM) */
+/* ==================================================
+>>>>> (08-A) - TEAM MEMBERS CARDS (FORM)
+================================================== */
 
 .team_members-cards {
   display: flex;
@@ -1035,4 +1068,78 @@ label img {
 #staff-opt6:checked ~ .tori {
   display: flex;
   visibility: visible;
+}
+
+/* ==================================================
+>>>>> (09) - PRICING TABLE
+================================================== */
+
+.pricing_table {
+  margin-bottom: 6rem;
+}
+
+.pricing_table-content {
+  padding: 4rem 0 2rem 0;
+  margin-bottom: 4rem;
+  background-color: var(--col_Third);
+  box-shadow: 20vw 0 0 var(--col_Third), -20vw 0 0 var(--col_Third);
+}
+
+.pricing_table-grid {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+}
+
+.pricing_plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing_plan span[class="fw700"] {
+  font-size: 6.5rem;
+  color: #dfdfdf;
+  line-height: 0.8;
+}
+
+.pricing_plan-name {
+  font-size: 1.6rem;
+  letter-spacing: 10px;
+  color: var(--col_Second);
+  margin-bottom: 3rem;
+}
+
+.pricing_plan-price {
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+.pricing_plan-price sub {
+  font-size: 1.4rem;
+}
+
+.pricing_plan p:not([class]) {
+  font-size: 1.2rem;
+  line-height: 4;
+  margin-bottom: 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.pricing_plan p:last-of-type:not([class]) {
+  border-bottom: none;
+}
+
+/* ==================================================
+>>>>> (10) - SITE TESTIMONIALS
+================================================== */
+
+.site_testimonials {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  background-color: var(--col_Second);
+  width: 100%;
+  height: 30rem;
 }
