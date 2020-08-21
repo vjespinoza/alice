@@ -1136,10 +1136,76 @@ label img {
 
 .site_testimonials {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
-  align-content: center;
+  align-items: center;
+  color: white;
   background-color: var(--col_Second);
   width: 100%;
-  height: 30rem;
+  padding: 8rem 0;
+}
+
+.client_testimonial {
+  max-width: 50rem;
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.client_testimonial span {
+  font-size: 5rem;
+  line-height: 0.5;
+  margin: 0;
+}
+/* 
+.client_testimonial:after {
+  content: close-quote;
+  display: block;
+  text-align: right;
+  width: 100vw;
+  height: 50px;
+  border-style: none solid solid none;
+  border-width: 1px;
+  border-color: white;
+  transform: skewX(-50deg);
+  position: absolute;
+  bottom: -150%;
+  left: -175%;
+}
+
+.client_testimonial:before {
+  content: open-quote;
+  display: block;
+  text-align: left;
+  width: 100vw;
+  height: 50px;
+  border-style: solid none none solid;
+  border-width: 1px;
+  border-color: white;
+  transform: skewX(-50deg);
+  position: absolute;
+  top: -50%;
+  right: -175%;
+} */
+
+.client_name {
+  position: relative;
+}
+
+.client_name:before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--col_Main);
+  position: absolute;
+  top: -15%;
+  left: calc(50% - 25px);
+}
+
+.client_company {
+  font-size: 1rem;
+  font-weight: 300;
 }
