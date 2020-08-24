@@ -1143,55 +1143,45 @@ label img {
   color: white;
   background-color: var(--col_Second);
   width: 100%;
-  padding: 8rem 0;
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.site_testimonials:after,
+.site_testimonials:before {
+  content: "";
+  display: block;
+  width: 75vw;
+  height: 50px;
+  border-width: 1px;
+  border-color: white;
+  transform: skewX(-50deg);
+  position: absolute;
+}
+
+.site_testimonials:after {
+  border-style: none solid solid none;
+  bottom: 20%;
+  left: 0;
+}
+
+.site_testimonials:before {
+  border-style: solid none none solid;
+  top: 20%;
+  right: 0;
 }
 
 .client_testimonial {
   max-width: 50rem;
   font-size: 1.2rem;
   line-height: 2;
-  margin-bottom: 3rem;
-  position: relative;
+  margin: 0 auto 3rem auto;
 }
-
-.client_testimonial span {
-  font-size: 5rem;
-  line-height: 0.5;
-  margin: 0;
-}
-/* 
-.client_testimonial:after {
-  content: close-quote;
-  display: block;
-  text-align: right;
-  width: 100vw;
-  height: 50px;
-  border-style: none solid solid none;
-  border-width: 1px;
-  border-color: white;
-  transform: skewX(-50deg);
-  position: absolute;
-  bottom: -150%;
-  left: -175%;
-}
-
-.client_testimonial:before {
-  content: open-quote;
-  display: block;
-  text-align: left;
-  width: 100vw;
-  height: 50px;
-  border-style: solid none none solid;
-  border-width: 1px;
-  border-color: white;
-  transform: skewX(-50deg);
-  position: absolute;
-  top: -50%;
-  right: -175%;
-} */
 
 .client_name {
   position: relative;
+  margin-bottom: 0;
 }
 
 .client_name:before {
@@ -1208,4 +1198,114 @@ label img {
 .client_company {
   font-size: 1rem;
   font-weight: 300;
+}
+
+/* ==================================================
+>>>>> (11) - SITE CONTACT SECTION
+================================================== */
+
+/* ==================================================
+>>>>> (11-A) - LAYOUT AND POSITIONING
+================================================== */
+
+.site_contact {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--col_Third);
+}
+
+.site_contact-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .site_contact-container {
+    flex-direction: row;
+    flex: 1 1 35%;
+    padding: 4rem;
+  }
+}
+
+.contact_info {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.info_item {
+  display: none;
+}
+
+.contact_info span i {
+  font-size: 3rem;
+  margin: 0 auto 2rem auto;
+}
+
+.contact_info p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .contact_info {
+    flex-direction: column;
+    padding: 0 0 0 2rem;
+  }
+
+  .info_item {
+    display: block;
+    margin: 0 0 3rem 0;
+    width: 100%;
+  }
+
+  .info_item:last-of-type {
+    margin: 0;
+  }
+}
+
+.contact_map {
+  flex: 1 1 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+  /* W3School reference - Responsive Iframe */
+  padding-top: 75%;
+}
+
+@media (min-width: 900px) {
+  .contact_map {
+    flex: 1 1 65%;
+    padding-top: 0;
+  }
+}
+
+.contact_map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==================================================
+>>>>> (11-B) - FORM STYLING
+================================================== */
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.form_title {
+  font-size: clamp(2.5rem, 3vw, 5rem);
+  margin-bottom: 0.5rem;
 }

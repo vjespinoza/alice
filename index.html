@@ -572,14 +572,13 @@
     <section class="site_contact">
       <div class="site_contact-container">
         <form class="contact_form">
-          <legend class="form_title">
-            Let's talk!<br /><span class="form_copy"
-              >Need a website? Boost your social media? Get your brand know?
-              Leave your contact info below.</span
-            >
+          <legend>
+            <h3 class="form_title fw400 col-main">Let's talk!</h3>
+            <p class="form_copy">Need a website? Boost your social media? Get your brand know?
+              Leave your contact info below.</p>
           </legend>
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" placeholder="Your name"/>
           <label for="email">Email:</label>
           <input type="email" id="email" placeholder="email@example.com" />
           <label for="message">Yout message:</label>
@@ -593,31 +592,41 @@
         <!--contact_form-->
 
         <div class="contact_info">
-          <span class="addess-icon"><i class="far fa-building"></i></span>
-          <p class="address-info">
-            20 W 34th St, New York, NY 10001, United States
-          </p>
 
-          <span class="phone-icon"><i class="fas fa-phone-alt"></i></span>
-          <p class="phone-info">+1 (800) 987.6543</p>
+          <div class="info_item">
+            <span class="addess-icon"><i class="far fa-building"></i></span>
+            <p class="address-info">
+              20 W 34th St, New York, NY 10001, United States
+            </p>
+          </div>
 
-          <span class="email-icon"><i class="fas fa-at"></i></span>
-          <p class="email-info">hello@alice.com</p>
-        </div>
+          <div class="info_item">
+            <span class="phone-icon"><i class="fas fa-phone-alt"></i></span>
+            <p class="phone-info">+1 (800) 987.6543</p>
+          </div>
+
+          <div class="info_item">
+            <span class="email-icon"><i class="fas fa-at"></i></span>
+            <p class="email-info">hello@alice.com</p>
+          </div>
+         </div>
         <!--contact_info-->
       </div>
       <!--site_contact-container-->
 
-      <!-- <iframe
+      <div class="contact_map">
+        <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12090.470159428245!2d-73.9856644!3d40.7484405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1ses!2sco!4v1597259581982!5m2!1ses!2sco"
-        width="800"
-        height="300"
+        width="300"
+        height="150"
         frameborder="0"
         style="border: 0;"
         allowfullscreen=""
         aria-hidden="false"
         tabindex="0"
-      ></iframe> -->
+      ></iframe>
+    </div>
+      
     </section>
 
     <footer class="site_footer">
