@@ -99,6 +99,38 @@ img {
   }
 }
 
+.form {
+  margin: 0;
+}
+
+.form label {
+  position: absolute;
+  font-size: 1.8rem;
+  color: var(--col_Second-Opacity);
+  left: 1rem;
+  transition: all ease-in-out 0.3s;
+  cursor: text;
+}
+
+.form input:not([type="submit"]),
+.form textarea {
+  width: 100%;
+  height: 5rem;
+  font-size: 1.4rem;
+  padding: 2rem 1rem;
+  border: 0;
+  position: relative;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  cursor: text;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: transparent;
+}
+
 .col-main {
   color: var(--col_Main);
 }
@@ -638,7 +670,7 @@ img {
 .site_cta {
   background: var(--col_Second);
   color: white;
-  height: calc(20rem + 5vh);
+  padding: 4rem 2rem;
 }
 
 .cta_d-flex {
@@ -649,9 +681,29 @@ img {
   height: 100%;
 }
 
+.cta_title {
+  font-size: clamp(2.5rem, 3vw, 5rem);
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.cta_text {
+  margin: 0;
+  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+}
+
 .cta_content,
 .cta_form {
   flex: 1 1 auto;
+}
+
+.cta_form {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.cta_form .form_data {
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -659,52 +711,15 @@ img {
   .cta_form {
     flex: 0 0 calc(50% - 20px);
   }
-}
 
-.cta_title {
-  font-size: clamp(2.5rem, 3vw, 5rem);
-  margin-bottom: 0.5rem;
-}
-
-.cta_text {
-  margin-bottom: 0;
-  font-size: clamp(1.4rem, 1.5vw, 1.6rem);
-}
-
-.cta_form {
-  position: relative;
-}
-
-.cta_form label {
-  position: absolute;
-  font-size: 1.8rem;
-  color: var(--col_Second-Opacity);
-  top: 25%;
-  left: 1rem;
-  transition: all ease-in-out 0.3s;
-  cursor: text;
-}
-
-.cta_form input {
-  width: 100%;
-  height: 5rem;
-  font-size: 1.6rem;
-  padding: 0 1rem;
-  border: 0;
-  position: relative;
-  outline: none;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-.cta_form input::placeholder {
-  color: transparent;
+  .cta_form {
+    margin: 0;
+  }
 }
 
 .cta_form input:focus ~ label,
 .cta_form input:not(:placeholder-shown) ~ label {
-  transform: translateY(-150%) translateX(-6%);
-  color: white;
+  top: 2px;
   transition: all ease-in-out 0.3s;
 }
 
@@ -1226,14 +1241,14 @@ label img {
   .site_contact-container {
     flex-direction: row;
     flex: 1 1 35%;
-    padding: 4rem;
+    padding: 4rem 2rem;
   }
 }
 
 .contact_info {
   display: flex;
   text-align: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .info_item {
@@ -1258,7 +1273,6 @@ label img {
 
   .info_item {
     display: block;
-    margin: 0 0 3rem 0;
     width: 100%;
   }
 
@@ -1308,4 +1322,41 @@ label img {
 .form_title {
   font-size: clamp(2.5rem, 3vw, 5rem);
   margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.form_copy {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+}
+
+.form_data {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form_data textarea {
+  resize: none;
+  height: 15rem;
+}
+
+.form_data label {
+  position: absolute;
+  top: 10px;
+}
+
+.form_data:focus-within label,
+.form_data input:not(:placeholder-shown) ~ label,
+.form_data textarea:not(:placeholder-shown) ~ label {
+  top: 2px;
+  font-size: 1rem;
+}
+
+/* ==================================================
+>>>>> (12) - SITE FOOTER
+================================================== */
+.site_footer {
+  background: var(--col_Second);
+  color: white;
+  padding: 4rem 0;
 }
