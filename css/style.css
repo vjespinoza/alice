@@ -60,6 +60,7 @@ img {
 >>>>> (B) - UTILITIES
 ================================================== */
 
+/* CONTAINER */
 .container {
   width: 90%;
   max-width: 120rem;
@@ -72,6 +73,7 @@ img {
   }
 }
 
+/* BUTTON */
 .btn {
   display: block;
   color: white;
@@ -98,6 +100,8 @@ img {
     flex: 0 0 auto;
   }
 }
+
+/* FORM */
 
 .form {
   margin: 0;
@@ -131,6 +135,29 @@ img {
   color: transparent;
 }
 
+.form_data {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form_data textarea {
+  resize: none;
+  height: 15rem;
+}
+
+.form_data label {
+  position: absolute;
+  top: 12px;
+}
+
+.form_data:focus-within label,
+.form_data input:not(:placeholder-shown) ~ label,
+.form_data textarea:not(:placeholder-shown) ~ label {
+  top: 2px;
+  font-size: 1rem;
+}
+
+/* INLINE STYLE CLASSES */
 .col-main {
   color: var(--col_Main);
 }
@@ -715,12 +742,6 @@ img {
   .cta_form {
     margin: 0;
   }
-}
-
-.cta_form input:focus ~ label,
-.cta_form input:not(:placeholder-shown) ~ label {
-  top: 2px;
-  transition: all ease-in-out 0.3s;
 }
 
 .cta_form input[type="submit"] {
@@ -1330,28 +1351,6 @@ label img {
   margin-bottom: 4rem;
 }
 
-.form_data {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.form_data textarea {
-  resize: none;
-  height: 15rem;
-}
-
-.form_data label {
-  position: absolute;
-  top: 10px;
-}
-
-.form_data:focus-within label,
-.form_data input:not(:placeholder-shown) ~ label,
-.form_data textarea:not(:placeholder-shown) ~ label {
-  top: 2px;
-  font-size: 1rem;
-}
-
 /* ==================================================
 >>>>> (12) - SITE FOOTER
 ================================================== */
@@ -1359,26 +1358,28 @@ label img {
 .site_footer {
   display: flex;
   flex-direction: column;
-  background: var(--col_Second);
+  background: #777777;
   color: white;
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
 }
+
+/* ==================================================
+>>>>> (12-A) - FOOTER MAIN CONTENT
+================================================== */
 
 .footer_main {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  width: 100vw;
-  height: 40rem;
 }
 
-/* .footer_content,
+.footer_content,
 .footer_twitter-feed,
 .footer_instagram-feed {
   flex: 0 0 100%;
-} */
+  margin-bottom: 4rem;
+}
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .footer_main {
     flex-direction: row;
     justify-content: space-between;
@@ -1388,30 +1389,65 @@ label img {
   .footer_twitter-feed,
   .footer_instagram-feed {
     flex: 0 0 calc(33.33% - 2rem);
+    margin-bottom: 0;
   }
 }
 
-/* .twt_feed {
-  width: 100%;
-  height: 40rem;
-  overflow-y: scroll;
-}
-
-.twitter-timeline {
-  display: block;
-  border-radius: 0;
-  height: 100%;
+.footer_text,
+.twt_feed,
+.insta_feed {
+  padding-top: 2rem;
 }
 
 .insta_feed {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .insta_feed {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
 }
 
 .insta_feed figure {
-  flex: 1 1 auto;
+  margin: 0;
+  max-width: 150px;
 }
 
-.insta_feed img {
-  width: 50px;
-} */
+.insta_feed figcaption {
+  display: none;
+}
+
+/* ==================================================
+>>>>> (12-B) - FOOTER BOTTOM BAR
+================================================== */
+
+.footer_bottom-bar {
+  background: var(--col_Second);
+  margin-top: 4rem;
+  padding: 1rem 0;
+}
+
+.footer_d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.footer_legal {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.footer_social a {
+  color: white;
+}
