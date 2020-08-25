@@ -317,8 +317,7 @@ img {
   display: block;
   max-width: 50rem;
   color: white;
-  box-shadow: 0 -15px 0 var(--col_Main-Opacity),
-    0 15px 0 var(--col_Main-Opacity), inset -15px 0 0 var(--col_Main-Opacity);
+  border-right: 15px solid rgba(252, 163, 17, 0.5);
   padding: 6rem 4rem 4rem 0;
   position: relative;
 }
@@ -332,20 +331,23 @@ img {
 .header_content-wrapper:before,
 .header_content-wrapper:after {
   content: "";
-  display: block;
-  width: 1.5rem;
+  width: calc(100% + 15px);
   height: 100vh;
-  background-color: var(--col_Main-Opacity);
+  background: transparent;
   position: absolute;
   left: 0;
+  border-width: 15px;
+  border-color: rgba(252, 163, 17, 0.5);
 }
 
 .header_content-wrapper:before {
-  bottom: calc(100% + 15px);
+  border-style: none none solid solid;
+  top: -100vh;
 }
 
 .header_content-wrapper:after {
-  top: calc(100% + 15px);
+  border-style: solid none none solid;
+  bottom: -100vh;
 }
 
 .header_title {
