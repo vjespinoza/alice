@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -17,34 +19,48 @@
     <div class="site_nav">
       <div class="container">
         <div class="site_nav-content">
+
           <img src="./img/alice_logo.svg" alt="Alice Logo" class="site_logo" />
+         
+          <input type="checkbox" id="toggle_mob-menu">
+          <label class="toggle_mob-menu" for="toggle_mob-menu"><i class="fas fa-ellipsis-v mobile_menu-icon"></i></label>
+          
           <nav class="nav_bar">
             <ul class="menu_list">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li>
-                <a href="#">Services</a>
-                <ul class="subMenu_list">
-                  <li><a href="#">Web Development</a></li>
-                  <li><a href="#">UI/UX Design</a></li>
-                  <li><a href="#">Brand Design</a></li>
-                  <li><a href="#">Digital Marketing</a></li>
+                <input type="radio" name="SubMenu1" id="toggle_mob-SubMenu1">
+                <label for="toggle_mob-SubMenu1" class="toggle_mob-SubMenu1">Services <i class="fas fa-caret-down"></i></label>
+                <ul class="subMenu_list SubMenu1">
+                  <div class="SMenu1_wrapper">
+                    <input type="radio" name="SubMenu1" id="toggle_back1">
+                    <label for="toggle_back1"><span class="material-icons">keyboard_backspace</span></label>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Brand Design</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                  </div>
                 </ul>
               </li>
               <li><a href="#">Work</a></li>
               <li>
-                <a href="#">Resources</a>
-                <ul class="subMenu_list">
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Guides</a></li>
-                  <li><a href="#">Community</a></li>
+                <input type="radio" name="SubMenu2" id="toggle_mob-SubMenu2">
+                <label for="toggle_mob-SubMenu2" class="toggle_mob-SubMenu2">Resources <i class="fas fa-caret-down"></i></label>
+                <ul class="subMenu_list SubMenu2">
+                  <div class="SMenu2_wrapper">
+                    <input type="radio" name="SubMenu2" id="toggle_back2">
+                    <label for="toggle_back2"><span class="material-icons">keyboard_backspace</span></label>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Community</a></li>
+                  </div>
                 </ul>
               </li>
               <li><a href="#">Blog</a></li>
             </ul>
             <a href="#" class="contact_btn btn">Contact</a>
           </nav>
-          <i class="fas fa-ellipsis-v mobile_menu-icon"></i>
         </div>
       </div>
     </div>
