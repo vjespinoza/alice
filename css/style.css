@@ -228,6 +228,7 @@ img {
   color: var(--col_Second);
   cursor: pointer;
   height: 5rem;
+  width: 3rem;
   line-height: 5rem;
   text-align: right;
 }
