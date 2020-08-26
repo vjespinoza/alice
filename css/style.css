@@ -359,8 +359,8 @@ img {
 
 @media (min-width: 768px) {
   .mobile_menu-icon,
-  label[for="toggle_back1"],
-  label[for="toggle_back2"] {
+  .SMenu1_wrapper label[for="toggle_back1"],
+  .SMenu2_wrapper label[for="toggle_back2"] {
     display: none;
   }
 
@@ -376,12 +376,6 @@ img {
   .SMenu2_wrapper {
     all: unset;
   }
-
-  /* .menu_list li a,
-  .menu_list label,
-  .subMenu_list li a {
-    all: unset;
-  } */
 }
 
 /* DESKTOP STYLES */
@@ -408,17 +402,16 @@ img {
   .menu_list li,
   .subMenu_list li {
     display: block;
-    margin: 0 2rem;
     padding: 0;
+    margin: 0 1rem;
   }
 
   .menu_list li a,
   .menu_list label,
   .subMenu_list li a {
     display: block;
-    margin: 0 2rem;
     height: 5rem;
-    padding: 0;
+    padding: 0 1rem;
     line-height: 5rem;
   }
 
@@ -426,8 +419,10 @@ img {
   .subMenu_list.SubMenu2 {
     display: block;
     position: relative;
+    top: -5rem;
     line-height: 5rem;
     height: 100%;
+    padding: 0;
     /* box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
     background-color: yellowgreen; */
   }
@@ -448,10 +443,16 @@ img {
     top: -400%;
   }
 
-  .subMenu_list.SubMenu1:hover > .SMenu1_wrapper,
-  .subMenu_list.SubMenu2:hover > .SMenu2_wrapper {
+  .show-sm1:hover > ul .SMenu1_wrapper,
+  .show-sm2:hover > ul .SMenu2_wrapper {
     top: 100%;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.3s;
+  }
+
+  .contact_btn {
+    height: 1.2rem;
+    font-size: 1rem;
+    margin: auto 0;
   }
 }
 
