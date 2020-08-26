@@ -295,12 +295,6 @@ img {
   cursor: pointer;
 }
 
-.btn_wrapper {
-  display: block;
-  margin-bottom: 5rem;
-  flex: 0 0 auto;
-}
-
 .contact_btn {
   display: block;
   width: 80px;
@@ -355,6 +349,110 @@ img {
   font-size: 2rem;
   cursor: pointer;
   padding: 0.2rem;
+}
+
+/* ==================================================
+>>>>> (01-B) - DESKTOP MENU
+================================================== */
+
+/* MOBILE STYLES RESET */
+
+@media (min-width: 768px) {
+  .mobile_menu-icon,
+  label[for="toggle_back1"],
+  label[for="toggle_back2"] {
+    display: none;
+  }
+
+  .nav_bar,
+  .overflow_wrapper,
+  .menu_list,
+  .subMenu_list,
+  .SubMenu1,
+  .SubMenu2,
+  .subMenu_list.SubMenu1,
+  .subMenu_list.SubMenu2,
+  .SMenu1_wrapper,
+  .SMenu2_wrapper {
+    all: unset;
+  }
+
+  /* .menu_list li a,
+  .menu_list label,
+  .subMenu_list li a {
+    all: unset;
+  } */
+}
+
+/* DESKTOP STYLES */
+
+@media (min-width: 768px) {
+  .nav_bar {
+    background-color: white;
+  }
+
+  .nav_bar .overflow_wrapper {
+    display: flex;
+  }
+
+  .menu_list {
+    display: flex;
+  }
+
+  .menu_list,
+  .subMenu_list ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .menu_list li,
+  .subMenu_list li {
+    display: block;
+    margin: 0 2rem;
+    padding: 0;
+  }
+
+  .menu_list li a,
+  .menu_list label,
+  .subMenu_list li a {
+    display: block;
+    margin: 0 2rem;
+    height: 5rem;
+    padding: 0;
+    line-height: 5rem;
+  }
+
+  .subMenu_list.SubMenu1,
+  .subMenu_list.SubMenu2 {
+    display: block;
+    position: relative;
+    line-height: 5rem;
+    height: 100%;
+    /* box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
+    background-color: yellowgreen; */
+  }
+
+  .SMenu1_wrapper,
+  .SMenu2_wrapper {
+    position: absolute;
+    padding: 2rem 4rem 2rem 0;
+    background-color: white;
+    z-index: -1;
+  }
+
+  .SMenu1_wrapper {
+    top: -500%;
+  }
+
+  .SMenu2_wrapper {
+    top: -400%;
+  }
+
+  .subMenu_list.SubMenu1:hover > .SMenu1_wrapper,
+  .subMenu_list.SubMenu2:hover > .SMenu2_wrapper {
+    top: 100%;
+    transition: ease-in-out 0.5s;
+  }
 }
 
 /* ==================================================
