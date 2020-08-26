@@ -23,6 +23,13 @@ html {
   box-sizing: inherit;
 }
 
+/* Avoid content scroll when mobile menu is active */
+/* HTML {overflow:hidden} is part of the fix */
+/* body {
+  overflow: visible;
+  height: 100%;
+} */
+
 /* ==================================================
 >>>>> (A) - GLOBAL STYLES
 ================================================== */
@@ -67,7 +74,7 @@ img {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .container {
     width: 70%;
   }
@@ -198,8 +205,6 @@ img {
   width: 100%;
   height: 5rem;
   background-color: white;
-  -webkit-box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -211,7 +216,6 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  position: relative;
 }
 
 .site_logo {
@@ -235,16 +239,17 @@ img {
 
 .nav_bar {
   display: block;
-  width: 75%;
+  width: 28rem;
+  height: 100vh;
   text-align: left;
   position: absolute;
   top: 5rem;
   right: -110%;
   background-color: white;
-  -webkit-box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
-  transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.3s;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #toggle_mob-menu,
@@ -254,14 +259,17 @@ img {
 }
 
 #toggle_mob-menu:checked ~ .nav_bar {
-  right: -6%;
+  right: 0;
+}
+
+.overflow_wrapper {
+  height: 100%;
+  margin-bottom: 5rem;
 }
 
 .menu_list {
-  position: relative;
-  margin: 0;
-  padding-top: 4rem;
-  overflow: hidden;
+  display: block;
+  margin: 5rem 0;
 }
 
 .menu_list,
@@ -281,20 +289,27 @@ img {
 .subMenu_list li a {
   display: block;
   color: var(--col_Second);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   width: 100%;
-  padding: 2rem 0 2rem 2rem;
+  padding: 1rem 0 1rem 2rem;
   cursor: pointer;
+}
+
+.btn_wrapper {
+  display: block;
+  margin-bottom: 5rem;
+  flex: 0 0 auto;
 }
 
 .contact_btn {
   display: block;
-  width: 100px;
-  margin: 4rem auto 4rem auto;
+  width: 80px;
+  margin: 0 auto;
+  font-size: 1.1rem;
   background: transparent;
   color: var(--col_Second);
   border: 2px solid var(--col_Second);
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   cursor: pointer;
 }
 
@@ -307,15 +322,13 @@ img {
 .subMenu_list.SubMenu2 {
   display: block;
   width: 100%;
-  height: 100%;
-  padding-top: 4rem;
+  height: calc(100vh + 5rem);
+  padding: 5rem 0;
   background: white;
   position: absolute;
   top: 0;
   left: -100%;
-  transition: ease-in-out 0.5s;
-  -webkit-box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
+  transition: ease-in-out 0.3s;
   box-shadow: inset 0px 5px 5px -4px rgba(0, 0, 0, 0.3);
 }
 
@@ -335,7 +348,7 @@ img {
 .SMenu1_wrapper label[for="toggle_back1"],
 .SMenu2_wrapper label[for="toggle_back2"] {
   position: absolute;
-  top: -35px;
+  top: -40px;
   right: 20px;
   width: 25px;
   height: 25px;
@@ -352,7 +365,7 @@ img {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   background: linear-gradient(
       to right,
       rgba(47, 0, 255, 0.7),
