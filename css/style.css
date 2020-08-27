@@ -1119,10 +1119,13 @@ img {
 
   .square,
   .horizontal,
-  .horizontal-big,
+  .horizontal-big {
+    height: auto;
+  }
+
   .vertical,
   .vertical-big {
-    height: auto;
+    height: 70vh;
   }
 }
 
@@ -1131,7 +1134,8 @@ img {
   margin: 0;
   justify-content: center;
   align-content: center;
-  background-blend-mode: multiply;
+  background-color: transparent;
+  background-blend-mode: normal;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1141,7 +1145,8 @@ img {
 }
 
 .portfolio_item:hover {
-  background-color: var(--col_Third);
+  background-color: var(--col_Main);
+  background-blend-mode: multiply;
   transition: all ease-in-out 0.5s;
 }
 
