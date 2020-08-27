@@ -739,6 +739,10 @@ img {
   flex: 0 1 auto;
 }
 
+.feature_btn.btn:hover {
+  background: transparent;
+}
+
 @media (min-width: 768px) {
   .feature_card-content {
     justify-content: center;
@@ -779,7 +783,8 @@ img {
   }
 
   .feature_btn {
-    pointer-events: none;
+    position: relative;
+    z-index: 2;
     font-size: 1.2rem;
   }
 
@@ -1047,7 +1052,6 @@ img {
   margin: 0;
   justify-content: center;
   align-content: center;
-  background-color: transparent;
   background-blend-mode: multiply;
   background-size: 100%;
   background-position: center center;
