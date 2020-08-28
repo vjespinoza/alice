@@ -91,7 +91,7 @@ img {
   border: none;
   cursor: pointer;
   background-color: var(--col_Main);
-  flex: 0 0 auto;
+  flex: 0 0 100%;
   text-align: center;
   margin-top: 2rem;
 }
@@ -1366,23 +1366,9 @@ label img {
 
 .pricing_table-grid {
   display: grid;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-}
-
-@media (min-width: 690px) and (max-width: 1099px) {
-  .pricing_plan.plan-3 {
-    grid-column: span 2;
-    justify-self: center;
-    margin-top: 4rem;
-  }
-}
-
-@media (min-width: 1100px) {
-  .pricing_table-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 230px));
-  }
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
 }
 
 .pricing_plan {
