@@ -982,17 +982,72 @@ img {
 .portfolio_photo-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.square,
-.horizontal,
-.horizontal-big {
-  height: 50vw;
+.portfolio_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--col_Main);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 5rem;
 }
+
 .vertical,
 .vertical-big {
-  height: 100vw;
+  background-position: top center;
+}
+
+@media (min-width: 578px) and (max-width: 1100px) {
+  .p-item2 {
+    grid-row: 5;
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1100px) {
+  .portfolio_photo-grid {
+    grid-template-columns: 1fr 50px 1fr 50px 1fr;
+  }
+
+  .portfolio_item {
+    padding: 0;
+  }
+
+  .square {
+    grid-column: auto / span 1;
+    grid-row: auto / span 1;
+    padding: 4rem 2rem;
+  }
+  .square.p-item8 {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  .horizontal {
+    grid-column: auto / span 2;
+    grid-row: auto / span 1;
+    padding: 4rem 2rem;
+  }
+  .horizontal-big {
+    grid-column: auto / span 3;
+    grid-row: auto / span 1;
+    padding: 4rem 2rem;
+  }
+  .vertical {
+    grid-column: auto / span 1;
+    grid-row: auto / span 2;
+    padding: 10rem 2rem;
+  }
+  .vertical-big {
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+    padding: 12rem 2rem;
+  }
 }
 
 .p-item1 {
@@ -1029,178 +1084,6 @@ img {
 
 .p-item9 {
   background-image: url(../img/S3.9_V_sport-shoes-campaign-min.jpg);
-}
-
-@media (min-width: 480px) and (max-width: 1099px) {
-  .portfolio_photo-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .p-item1 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  .p-item2 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-  }
-
-  .p-item3 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-
-  .p-item4 {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-  }
-
-  .p-item5 {
-    grid-column: 1 / 3;
-    grid-row: 4 / 5;
-  }
-
-  .p-item6 {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-  }
-
-  .p-item7 {
-    grid-column: 1 / 2;
-    grid-row: 6 / 7;
-  }
-
-  .p-item8 {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
-  }
-
-  .p-item9 {
-    grid-column: 2 / 3;
-    grid-row: 6 / 7;
-  }
-}
-
-@media (min-width: 1100px) {
-  .portfolio_photo-grid {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(2, 1fr) 3vw repeat(3, 1fr) 3vw repeat(2, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-  }
-
-  .square {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-
-  .horizontal-big {
-    grid-column: span 5;
-    grid-row: span 2;
-  }
-
-  .horizontal {
-    grid-column: span 3;
-    grid-row: span 2;
-  }
-
-  .horizontal.p-item8 {
-    grid-column: 4 / span 3;
-    grid-row: 8 / span 2;
-  }
-
-  .vertical {
-    grid-column: span 3;
-    grid-row: span 5;
-  }
-
-  .square,
-  .horizontal,
-  .horizontal-big {
-    height: auto;
-  }
-
-  .vertical,
-  .vertical-big {
-    height: 70vh;
-  }
-}
-
-.portfolio_item {
-  display: flex;
-  margin: 0;
-  justify-content: center;
-  align-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-blend-mode: multiply;
-  background-size: calc(100% + 10vh);
-  background-position: center center;
-  background-repeat: no-repeat;
-  color: white;
-  transition: all ease-in-out 0.5s;
-  overflow: hidden;
-}
-
-.portfolio_item:hover {
-  background-color: #683f11;
-  background-blend-mode: multiply;
-  background-size: calc(100% + 15vh);
-  transition: all ease-in-out 0.5s;
-}
-
-.p_item-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 2rem;
-  position: relative;
-  opacity: 0;
-  transition: opacity ease-in-out 0.5s;
-}
-
-.portfolio_item:hover .p_item-content {
-  opacity: 1;
-  transition: opacity ease-in-out 0.5s;
-}
-
-.p_item-content h3 {
-  font-size: 1.4rem;
-}
-
-.p_item-content p {
-  font-size: 1.2rem;
-  max-width: 30rem;
-}
-
-.p_item-nav {
-  display: flex;
-  position: absolute;
-  justify-content: space-around;
-  align-items: center;
-  height: 4rem;
-  width: 10rem;
-  background: rgba(255, 255, 255, 0.4);
-  border-bottom-left-radius: 20px;
-  font-size: 1.5rem;
-  top: -1px;
-  right: 0;
-  z-index: 30;
-  transform: translateX(10rem);
-  transition: transform ease-in-out 0.5s;
-}
-
-.p_item-nav i {
-  cursor: pointer;
-}
-
-.portfolio_item:hover .p_item-nav {
-  transform: translateX(0);
-  transition: transform ease-in-out 0.5s;
 }
 
 /* ==================================================
