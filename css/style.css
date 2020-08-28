@@ -989,12 +989,57 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--col_Main);
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: multiply;
   background-position: center center;
-  background-size: cover;
+  background-size: 145%;
   background-repeat: no-repeat;
   margin: 0;
   padding: 5rem;
+  position: relative;
+  overflow: hidden;
+  transition: ease-in-out 500ms;
+}
+
+.portfolio_item:hover {
+  background-color: #704711;
+  background-size: 150%;
+}
+
+.p_item-content {
+  color: white;
+  opacity: 0;
+  transition: ease-in-out 500ms;
+}
+
+.p_item-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  width: 10rem;
+  height: 3rem;
+  border-bottom-left-radius: 20px;
+  transform: translateX(100%);
+  transition: ease-in-out 500ms;
+}
+
+.p_item-nav i {
+  font-size: 1.4rem;
+  cursor: pointer;
+  width: 2rem;
+  color: var(--col_Second);
+}
+
+.portfolio_item:hover .p_item-content {
+  opacity: 1;
+}
+
+.portfolio_item:hover .p_item-nav {
+  transform: translateX(0);
 }
 
 .vertical,
@@ -1002,14 +1047,16 @@ img {
   background-position: top center;
 }
 
-@media (min-width: 578px) and (max-width: 1100px) {
+@media (min-width: 578px) and (max-width: 1200px) {
   .p-item2 {
     grid-row: 5;
     grid-column: span 2;
+    padding: 10rem 2rem;
+    background-position: center left;
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .portfolio_photo-grid {
     grid-template-columns: 1fr 50px 1fr 50px 1fr;
   }
