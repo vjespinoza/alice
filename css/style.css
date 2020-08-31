@@ -23,13 +23,6 @@ html {
   box-sizing: inherit;
 }
 
-/* Avoid content scroll when mobile menu is active */
-/* HTML {overflow:hidden} is part of the fix */
-/* body {
-  overflow: visible;
-  height: 100%;
-} */
-
 /* ==================================================
 >>>>> (A) - GLOBAL STYLES
 ================================================== */
@@ -107,6 +100,12 @@ img {
     flex: 0 0 auto;
   }
 }
+
+/* JS CLASS */
+
+/* .stop_scroll {
+  overflow: hidden;
+} */
 
 /* FORM */
 
@@ -552,7 +551,8 @@ img {
 .header_title {
   line-height: 1;
   margin: 0;
-  font-size: clamp(4rem, 3.5vw, 6rem);
+  font-size: clamp(3rem, 3.5vw, 5.5rem);
+  background: aquamarine;
 }
 
 @media (min-width: 768px) {
@@ -563,7 +563,7 @@ img {
 
 .header_title span {
   color: var(--col_Main);
-  font-size: clamp(7rem, 6vw, 10rem);
+  font-size: clamp(6.5rem, 6vw, 10rem);
 }
 .header_slogan {
   font-size: 1.4rem;
