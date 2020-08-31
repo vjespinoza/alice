@@ -128,7 +128,7 @@ img {
   width: 100%;
   height: 5rem;
   font-size: 1.4rem;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   border: 0;
   position: relative;
   outline: none;
@@ -160,8 +160,8 @@ img {
 .form_data:focus-within label,
 .form_data input:not(:placeholder-shown) ~ label,
 .form_data textarea:not(:placeholder-shown) ~ label {
-  top: 2px;
-  font-size: 1rem;
+  transform: scale(0.7) translateY(-14px);
+  transform-origin: top left;
 }
 
 /* INLINE STYLE CLASSES */
@@ -343,7 +343,7 @@ img {
 .SMenu2_wrapper label[for="toggle_back2"] {
   position: absolute;
   top: -40px;
-  right: 20px;
+  right: 5vw;
   width: 25px;
   height: 25px;
   font-size: 2rem;
@@ -357,7 +357,7 @@ img {
 
 /* MOBILE STYLES RESET */
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .mobile_menu-icon,
   .SMenu1_wrapper label[for="toggle_back1"],
   .SMenu2_wrapper label[for="toggle_back2"] {
@@ -380,7 +380,7 @@ img {
 
 /* DESKTOP STYLES */
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .nav_bar {
     background-color: white;
   }
@@ -858,6 +858,12 @@ img {
   text-align: center;
 }
 
+@media (min-width: 768px) and (max-width: 1343px) {
+  .services_card:last-of-type {
+    grid-column: span 2;
+  }
+}
+
 .services_card-title i {
   font-size: 5rem;
   margin-bottom: 2rem;
@@ -1142,6 +1148,13 @@ img {
   width: 100%;
   height: 100%;
   color: white;
+  padding-top: 4rem;
+}
+
+@media (min-width: 1100px) {
+  .team_members {
+    padding-top: 0;
+  }
 }
 
 .team_d-flex {
@@ -1434,40 +1447,57 @@ label img {
   text-align: center;
   align-items: center;
   color: white;
-  background-color: var(--col_Second);
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(
+      #1d1d1d 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      transparent 50%,
+      transparent 75%,
+      #242424 75%,
+      #242424
+    );
+  background-color: #131313;
+  background-size: 20px 20px;
   width: 100%;
   padding: 10rem 0;
   position: relative;
   overflow: hidden;
 }
 
-.site_testimonials:after,
-.site_testimonials:before {
-  content: "";
-  display: block;
-  width: 75vw;
-  height: 50px;
-  border-width: 1px;
-  border-color: white;
-  transform: skewX(-50deg);
-  position: absolute;
-}
+@media (min-width: 1000px) {
+  .site_testimonials:after,
+  .site_testimonials:before {
+    content: "";
+    display: block;
+    width: 75vw;
+    height: 50px;
+    border-width: 1px;
+    border-color: white;
+    transform: skewX(-50deg);
+    position: absolute;
+  }
 
-.site_testimonials:after {
-  border-style: none solid solid none;
-  bottom: 20%;
-  left: 0;
-}
+  .site_testimonials:after {
+    border-style: none solid solid none;
+    bottom: 20%;
+    left: 0;
+  }
 
-.site_testimonials:before {
-  border-style: solid none none solid;
-  top: 20%;
-  right: 0;
+  .site_testimonials:before {
+    border-style: solid none none solid;
+    top: 20%;
+    right: 0;
+  }
 }
 
 .client_testimonial {
   max-width: 50rem;
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
   line-height: 2;
   margin: 0 auto 3rem auto;
 }
@@ -1685,18 +1715,40 @@ label img {
 .footer_bottom-bar {
   background: var(--col_Second);
   margin-top: 4rem;
-  padding: 1rem 0;
+  padding: 2rem 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .footer_bottom-bar {
+    padding: 1rem 0;
+  }
 }
 
 .footer_d-flex {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  align-content: center;
+}
+
+@media (min-width: 768px) {
+  .footer_d-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
 }
 
 .footer_legal {
   font-size: 1.2rem;
-  margin: 0;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer_legal {
+    margin-bottom: 0;
+  }
 }
 
 .footer_social {
